@@ -41,8 +41,7 @@ functions:
           path: notes
           method: post
           cors: true
-          authorizer:
-            arn: arn:aws:cognito-idp:us-east-1:851308372064:userpool/us-east-1_kQetcfwHf
+          authorizer: aws_iam
 
   get:
       # Defines an HTTP API endpoint that calls the main function in get.js
@@ -80,8 +79,7 @@ functions:
           path: notes/{id}
           method: put
           cors: true
-          authorizer:
-            arn: arn:aws:cognito-idp:us-east-1:851308372064:userpool/us-east-1_kQetcfwHf
+          authorizer: aws_iam
 
   delete:
     # Defines an HTTP API endpoint that calls the main function in delete.js
@@ -93,5 +91,4 @@ functions:
           path: notes/{id}
           method: delete
           cors: true
-          authorizer:
-            arn: arn:aws:cognito-idp:us-east-1:851308372064:userpool/us-east-1_kQetcfwHf
+          authorizer: aws_iam
